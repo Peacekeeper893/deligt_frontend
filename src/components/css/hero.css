@@ -1,0 +1,8 @@
+@media screen and (max-width: 700) {
+    #hero_el{
+
+        flex-direction: column;
+        font-size: xx-large;
+    }
+
+}

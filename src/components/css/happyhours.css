@@ -1,0 +1,18 @@
+
+
+#happy-hours{
+
+    background-image: url('https://wordpress.iqonic.design/product/wp-free/geritcht/wp-content/uploads/2021/08/1-3.png');
+    width: 100%;
+    height: 100vh;
+    background-position: center center;;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 60%;
+    position: absolute;
+    bottom: 0px;
+    left : 0px;
+    right:0px;
+    
+}
