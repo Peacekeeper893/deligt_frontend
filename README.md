@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Deligt Restaurant Reservation and Online Ordering System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Deligt Restaurant Reservation and Online Ordering System is a web application that enables users to book tables at Deligt restaurant and place food orders online. This project provides a seamless dining experience for both customers and restaurant staff.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Description](#description)
+- [Demo](#demo)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Deligt Restaurant Reservation and Online Ordering System is a comprehensive solution for customers and Deligt restaurant staff. It allows users to book tables in advance, view the restaurant menu, and place orders online. Deligt staff can manage reservations and orders efficiently, improving the overall restaurant operations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo
 
-### `npm test`
+Try the poject here https://deligt.netlify.app/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+The project is built using the following technologies and tools:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React.js
+- Django
+- Python
+- Firebase
+- HTML/CSS
+- JavaScript
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The Deligt Restaurant Reservation and Online Ordering System offers the following key features:
 
-### `npm run eject`
+- User-friendly table booking system.
+- A menu with a variety of food and beverage options.
+- Secure user authentication and authorization.
+- Online order placement with options for customization.
+- Reservation management for Deligt staff.
+- Seamless communication between customers and Deligt staff.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To set up the Deligt Restaurant Reservation and Online Ordering System on your local machine, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Clone the repository
+git clone https://github.com/Peacekeeper893/deligt_frontend.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Change to the project directory
+cd deligt-restaurant-project
 
-## Learn More
+# Install the necessary dependencies for both the frontend (React) and backend (Django)
+npm install
+pip install -r requirements.txt
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You may need to configure your database settings and API keys as per your environment.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Sign in or create an account.
+2. Browse available tables and book one at Deligt restaurant for your preferred date and time.
+3. Learn more about Deligt restaurant, its history, and special offerings on our website or in the restaurant itself.
+4. Explore the restaurant menu and customize your order.
+5. Deligt staff can manage reservations, view orders, and communicate with customers.
+6. Enjoy a hassle-free dining experience at Deligt.
