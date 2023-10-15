@@ -30,7 +30,7 @@ const MenuSelector = () => {
 
 
   return (
-    <div className='min-h-[90vh] bg-primary text-white pb-5'>
+    <div className='min-h-[90vh] bg-primary text-white pb-1'>
     
       
           <div className={"flex flex-col justify-center bg-center bg-cover bg-no-repeat h-[90vh] w-full " + (currlink)}>

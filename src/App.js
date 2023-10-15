@@ -4,26 +4,53 @@ import './App.css';
 import {Routes , Route} from 'react-router-dom'
 
 import Navbar from './components/Navbar.jsx';
+import { useState, useEffect } from "react";
 
 import Footer from './components/Footer';
 import Home from './components/pages/Home';
 import BookTable from './components/pages/BookTable';
 import Store from './deligt_store/Store';
-
+import Login from './components/pages/Login';
+import Signup from './components/pages/Signup';
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from './firebase';
 
 function App() {
+
+  
+  const [loggedIn, setLoggedIn] = useState(false)
+
+  useEffect(()=>{
+      onAuthStateChanged(auth, (user) => {
+          if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/firebase.User
+            const uid = user.uid;
+            // ...
+              console.log("uid", uid)
+              setLoggedIn((prev) => (true));
+          } else {
+            // User is signed out
+            // ...
+              console.log("user is logged out")
+              setLoggedIn((prev) => (false));
+          }
+        });
+       
+  }, [])
   return (
     <div className="App">
 
       
 
       <Routes>
-        <Route exact path="/" element={<Fragment><Navbar /> <Home /></Fragment>} />
-        <Route path="/booktable" element={<Fragment><Navbar /> <BookTable /></Fragment>} />
-        <Route path="/store" element={<Fragment> <Store /></Fragment>} />
+        <Route exact path="/" element={<Fragment><Navbar  loggedIn={loggedIn} /> <Home /><Footer /></Fragment>} />
+        <Route path="/booktable" element={<Fragment><Navbar loggedIn={loggedIn}  /> <BookTable /><Footer /></Fragment>} />
+        <Route path="/store" element={<Fragment> <Store /> <div className='border-b-golden border-b-[1px]'/> <Footer /></Fragment>} />
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/signup" element={<Signup/>}/>
       </Routes>
 
-      <Footer />
     </div>
   );
 }

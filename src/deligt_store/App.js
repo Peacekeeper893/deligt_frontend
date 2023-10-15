@@ -30,6 +30,7 @@ function App() {
       <Hero />
       <MenuSelector/>
       
+      
     </CartProvider>
 
   );
