@@ -8,7 +8,7 @@ import signature from '../assets/sign.png'
 
 const ChefsWord = () => {
   return (
-      <div className='min-h-screen bg-primary  md:py-24 md:px-32 p-8 gap-24 text-white'>
+      <div className='min-h-screen bg-primary  md:py-24 md:px-32 p-8 gap-24 text-white md:sticky top-0'>
       
           <div className="flex md:flex-row flex-col">
               

@@ -1,4 +1,5 @@
-import {React , useState} from 'react'
+import { React, useState } from 'react'
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -6,6 +7,8 @@ import { BiCaretRight } from "react-icons/bi"
 import spoon from '../assets/spoon.png'
 
 const Tableherores = () => {
+
+  const navigate = useNavigate();
 
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
@@ -18,7 +21,8 @@ const Tableherores = () => {
   
     const [date, setDate] = useState(today)
     const [members, setMembers] = useState(null)  
-    const [time, setTime] = useState(null)
+  const [time, setTime] = useState(null)
+  const [Name, setName] = useState('')
   
     function handleChangeDate(event)
     {
@@ -27,9 +31,26 @@ const Tableherores = () => {
   
     function handleSubmit(event)
     {
-      event.preventDefault()
-      console.log(`A table for ${members} on ${date} at ${time}`)
-      alert("Thank you for submitting your request! . We will contact you shortly with further details!")
+      event.preventDefault();
+
+      const bookingInfo = {}
+
+      bookingInfo["name"] = Name;
+      bookingInfo["partySize"] = members;
+      bookingInfo["date"] = date;
+      bookingInfo["time"] = time;
+
+      navigate("/confirmation", {
+
+        state: {
+          name: Name,
+          time: time,
+          date: date,
+          partySize: members
+        }
+      });
+      // console.log(`A table for ${members} on ${date} at ${time}`)
+      // alert("Thank you for submitting your request! . We will contact you shortly with further details!")
     }
   
     function handleChangeTime(event)
@@ -74,7 +95,7 @@ const Tableherores = () => {
       
     </div>
 
-          <div className="flex justify-around font-cormant text-xl my-4  "><input type='text' placeholder='Name under Reservation' className='bg-primary text-black py-2 px-3 rounded-md hover:bg-primary hover:text-golden border-2 hover:border-golden  hover:ease-in duration-150 font-semibold w-[78%] text-center'/></div>
+          <div className="flex justify-around font-cormant text-xl my-4  "><input type='text' placeholder='Name under Reservation' className='bg-primary text-white py-2 px-3 rounded-md hover:bg-primary hover:text-golden border-2 hover:border-golden  hover:ease-in duration-150 font-semibold w-[78%] text-center' value={Name} onChange={(e) =>{setName(e.target.value)}}/></div>
 
           <div className="flex justify-around font-cormant text-xl my-4  "><input type='text' placeholder='Your e-mail addrress' className='bg-primary text-black py-2 px-3 rounded-md hover:bg-primary hover:text-golden border-2 hover:border-golden  hover:ease-in duration-150 font-semibold w-[78%] text-center'/></div>
           

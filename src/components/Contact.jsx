@@ -7,7 +7,7 @@ import './css/contact.css'
 
 const Contact = () => {
   return (
-    <div className='min-h-screen bg-primary  md:py-24 md:px-28 px-4 py-8 gap-24 text-white' id='contact_scroll'>
+    <div className='min-h-screen bg-primary  md:py-24 md:px-28 px-4 py-8 gap-24 text-white sticky top-0' id='contact_scroll'>
       
     <div className="flex" id='mainel'>
         

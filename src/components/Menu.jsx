@@ -12,7 +12,7 @@ import './css/Menu.css'
 
 const Menu = () => {
   return (
-      <div className='min-h-screen bg-primary flex flex-col justify-start text-white pt-8 ' id='rootdiv'>
+      <div className='min-h-screen bg-primary flex flex-col justify-start text-white pt-8 sticky ' id='rootdiv'>
           
 
           <div className="flex justify-around font-cormant text-2xl">Menu That Fits Your Palatte</div>

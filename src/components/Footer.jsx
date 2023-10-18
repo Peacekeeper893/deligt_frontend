@@ -7,7 +7,7 @@ import './css/footer.css'
 
 const Footer = () => {
   return (
-      <div className='min-h-screen bg-primary text-white flex flex-col pt-8'>
+      <div className='min-h-screen bg-primary text-white flex flex-col pt-8 sticky top-0'>
           <div className="flex border-golden w-4/5 mx-auto border-2 flex-col p-6">
               <p className='justify-around flex font-cormant text-3xl mb-6'>Newsletter</p>
               <p className='justify-center flex font-cormant md:text-7xl text-4xl text-golden mx-auto text-center'>Subscribe To Our Newsletter</p>
