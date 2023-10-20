@@ -10,8 +10,10 @@ import Confetti from 'react-confetti'
 const Confirmation = () => {
 
     const bookingInfo = useLocation();
-    console.log(bookingInfo)
-    const { width, height } = useWindowSize()
+    // console.log(bookingInfo.state.cartitems.length)
+  const { width, height } = useWindowSize()
+  
+  window.scrollTo(0,0)
   return (
       <div className="bg-primary min-h-screen flex flex-col justify-center items-center">
           
@@ -26,7 +28,7 @@ const Confirmation = () => {
           
           <div className="absolute top-32 text-golden text-3xl text-center font-lobster p-4"> Thank You for Choosing DELÍGT. We will reach out to you shortly.  </div>
           
-      <div className="bg-white rounded-lg p-16 shadow-lg max-w-xl w-full ">
+      <div className="bg-white rounded-lg py-8 px-16 shadow-lg max-w-xl w-full ">
         <h1 className="text-4xl font-semibold mb-8">Booking Confirmation</h1>
 
         <div className="grid grid-cols-2 gap-6 text-lg">

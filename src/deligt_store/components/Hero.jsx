@@ -14,7 +14,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="justify-center flex items-center mt-20 ml-8 text-5xl text-golden font-cormant font-bold" >Explore our excellent cuisine at home!</div>
+      <div className="justify-center flex  items-center mt-20 md:ml-8 md:text-5xl text-golden font-cormant font-bold text-4xl p-7 text-center" >Explore our excellent cuisine at home!</div>
+
+
     </div>
   );
 };

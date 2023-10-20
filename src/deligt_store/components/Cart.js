@@ -1,4 +1,5 @@
 import { React, useContext, Fragment } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -18,6 +19,8 @@ const BackDrop = (props) => {
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
+  const navigate = useNavigate();
+
 
     const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
     const hasItems = cartCtx.items.length > 0;
@@ -34,22 +37,34 @@ const Cart = (props) => {
     <ul>
           {cartCtx.items.map((item) => (
               <CartItem key={item.id} name={item.name} amount={item.amount} price={item.price}
-                  onRemove={ cartRemoveHandler.bind(null , item.id)}  onAdd ={cartAddHandler.bind(null , item)}
+              onRemove={cartRemoveHandler.bind(null, item.id)} onAdd={cartAddHandler.bind(null, item)}
+              
+              isCart = {true}
               />
       ))}
     </ul>
   );
 
-  const handleOrder = () => {
-    alert("Your order has been placed. Thank you for choosing us.")
+  const handleOrder = (event) => {
+    event.preventDefault();
 
-    window.location.reload()
+    // alert("Your order has been placed. Thank you for choosing us.")
+
+    // window.location.reload()
+
+    navigate("/order-processed", {
+
+      state: {
+        cartitems: cartCtx.items,
+        totalAmount:cartCtx.totalAmount
+      }
+    });
   }
 
   return (
     <Fragment>
       <BackDrop toHide={props.toHide} />
-          <div className="fixed left-12 top-6 flex flex-col p-5  z-30 bg-primary text-white h-[93%] w-[93%] rounded-xl">
+          <div className="fixed left-12 top-3 flex flex-col p-5  z-30 bg-primary text-white h-[97%] w-[93%] rounded-xl">
               
         <div className="flex justify-between ">
           <h1 className="text-3xl font-semibold text-center mb-4 items-baseline">Your Cart</h1>

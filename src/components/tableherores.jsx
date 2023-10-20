@@ -68,7 +68,7 @@ const Tableherores = () => {
 
 </div>
 
-<div className="border-golden border-2 mx-8 mt-8 p-4 flex flex-col">
+<div className="border-golden border-2 mx-8 my-12 p-4 flex flex-col">
   <div className="justify-center  text-center text-3xl text-white font-cormant "> Reservations</div>
   <div className="flex justify-around "> <img src={spoon} alt="Welcome" className='w-10 mt-2' /></div>
 

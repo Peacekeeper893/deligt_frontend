@@ -15,6 +15,7 @@ import Signup from './components/pages/Signup';
 import Confirmation from './components/pages/Confirmation';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from './firebase';
+import OrderProcessed from './components/pages/OrderProcessed';
 
 function App() {
 
@@ -50,7 +51,8 @@ function App() {
         <Route path="/store" element={<Fragment> <Store /> <div className='border-b-golden border-b-[1px]'/> <Footer /></Fragment>} />
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<Signup/>}/>
-        <Route path="/confirmation" element={<Fragment><Navbar/><Confirmation/><Footer/></Fragment>}/>
+        <Route path="/confirmation" element={<Fragment><Navbar loggedIn={loggedIn}/><Confirmation/><Footer/></Fragment>}/>
+        <Route path="/order-processed" element={<Fragment><Navbar loggedIn={loggedIn}/><OrderProcessed/><Footer/></Fragment>}/>
       </Routes>
 
     </div>
