@@ -64,7 +64,7 @@ const Cart = (props) => {
   return (
     <Fragment>
       <BackDrop toHide={props.toHide} />
-          <div className="fixed left-12 top-3 flex flex-col p-5  z-30 bg-primary text-white h-[97%] w-[93%] rounded-xl">
+          <div className="fixed md:left-12 left-4 top-3 flex flex-col p-5  z-30 bg-primary text-white h-[97%] w-[93%] rounded-xl">
               
         <div className="flex justify-between ">
           <h1 className="text-3xl font-semibold text-center mb-4 items-baseline">Your Cart</h1>
@@ -77,7 +77,7 @@ const Cart = (props) => {
                       <div className="flex items-center font-bold text-3xl">Total Amount</div>
                         <div>{totalAmount}</div>
                   </div>
-              {hasItems && <div className="flex justify-center"><button className="p-3 px-28  bg-red-400 rounded-xl" onClick={handleOrder}>Order</button></div>}
+              {hasItems && <div className="flex justify-center"><button className="p-3 px-28  bg-red-400 rounded-xl mt-6 md:mt-0" onClick={handleOrder}>Order</button></div>}
                   
               </div>
         

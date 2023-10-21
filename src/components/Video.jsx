@@ -11,14 +11,10 @@ const Video = () => {
     <div className='min-h-fit bg-primary hidden md:block sticky top-0 '>
 
 
-      <video src={meal} className="md:py-0 py-44" autoPlay={play} muted loop ref={vidRef} onMouseOver={() => {
-        setPlay(!play)
+      <video src={meal} className="md:py-0 py-44" autoPlay={play} muted loop ref={vidRef}  onWheel={() => {
 
-        if (play) {
-          vidRef.current.pause();
-        } else {
           vidRef.current.play();
-        }
+        
       
       
       }}></video>

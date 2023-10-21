@@ -39,7 +39,7 @@ const OrderProcessed = () => {
             </div>
 
             <div>
-                <img src={success} alt="" className="w-full h-[50vh]" />
+                <img src={success} alt="" className="w-full md:h-[50vh] mb-24 md:mb-4" />
             </div>
 
             <div className="text-golden text-3xl text-left  px-2 my-8 font-playfair font-bold">
@@ -47,7 +47,7 @@ const OrderProcessed = () => {
                 Your Order Details
             </div>
 
-            <div className="min-h-[40vh]">{cartItems}</div>
+            <div className="md:min-h-[40vh] min-h-[20vh]">{cartItems}</div>
 
             <div className="mt-8">
                 <div className="flex justify-between ">
